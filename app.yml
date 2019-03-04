@@ -55,6 +55,8 @@ env:
   ## TODO: List of comma delimited emails that will be made admin and developer
   ## on initial signup example 'user1@example.com,user2@example.com'
   DISCOURSE_DEVELOPER_EMAILS: 'subham@nichesoft.net'
+  DISCOURSE_DEVELOPER_USERNAME : 'subham'
+  DISCOURSE_DEVELOPER_PASSWORD: "grttechgamer123"
 
   ## TODO: The SMTP mail server used to validate new accounts and send notifications
   # SMTP ADDRESS, username, and password are required
@@ -95,8 +97,7 @@ hooks:
         cmd:
           - git clone https://github.com/discourse/docker_manager.git
           - git clone https://github.com/MuthukkumarNicheSoft/Plugin.git
-          - git clone https://github.com/MuthukkumarNicheSoft/CustomWizard.git
-
+          
 ## Any custom commands to run after building
 run:
   - exec: echo "Beginning of custom commands"
