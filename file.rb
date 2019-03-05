@@ -1,1 +1,1 @@
-rails r "u = User.create!(username: ‘{{ Muthukkumar }}’, email: ‘{{ muthukkumar@nichesoft.net }}’, password: ’ {{ Divipin!5566 }}’, admin: true)”; u.activate
+rails r "u = User.create!(username: ‘{{ Muthukkumar }}’, email: ‘{{ muthukkumar@nichesoft.net }}’, password: ’ {{ Nichesoftpin@07 }}’, admin: true)”; u.activate
