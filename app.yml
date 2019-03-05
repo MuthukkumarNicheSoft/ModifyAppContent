@@ -64,12 +64,12 @@ env:
   #DISCOURSE_SMTP_ADDRESS: smtp.gmail.com
   DISCOURSE_SMTP_PORT: 587
   DISCOURSE_SMTP_USER_NAME: muthukkumar@nichesoft.net
-  DISCOURSE_SMTP_PASSWORD: "Nichesoftpin@07"
+  DISCOURSE_SMTP_PASSWORD: "Divipin!5566"
   #DISCOURSE_SMTP_ENABLE_START_TLS: true           # (optional, default true)
   DISCOURSE_SMTP_ADDRESS: smtp.gmail.com
   DISCOURSE_SMTP_PORT: 587
   DISCOURSE_SMTP_USER_NAME: muthukkumar@nichesoft.net
-  DISCOURSE_SMTP_PASSWORD: "Nichesoftpin@07"
+  DISCOURSE_SMTP_PASSWORD: "Divipin!5566"
   DISCOURSE_SMTP_ENABLE_START_TLS: true
 
   ## If you added the Lets Encrypt template, uncomment below to get a free SSL certificate
@@ -96,7 +96,7 @@ hooks:
         cd: $home/plugins
         cmd:
           - git clone https://github.com/discourse/docker_manager.git
-          - git clone https://github.com/MuthukkumarNicheSoft/CSS-plugin.git
+          - git clone https://github.com/MuthukkumarNicheSoft/CSS-plugin.gitNichesoftpin@07
           
 ## Any custom commands to run after building
 run:
