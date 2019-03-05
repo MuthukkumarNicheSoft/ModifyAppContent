@@ -105,7 +105,7 @@ run:
   ## After getting the first signup email, re-comment the line. It only needs to run once.
   #- exec: rails r "u = User.create!(username: '{{ subham }}', email: '{{ subham@nichesoft.net }}', password: ' {{ grttechgamer123 }}', admin: true)"
   #- exec: cd /var/www/discourse && rails r "SiteSetting.notification_email= 'subham@nichesoft.net'"
-  - exec: cd /var/www/discourse && rails r file.rb
+  #- exec: cd /var/www/discourse && rails r file.rb
   
   - exec: echo "End of custom commands"
   
