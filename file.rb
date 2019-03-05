@@ -1,1 +1,1 @@
-rails r "u = User.create!(username: '{{ subham }}', email: '{{ subham@nichesoft.net }}', password: ' {{ grttechgamer123 }}', admin: true)"
+u = User.create!(username: '{{ Muthukkumar }}', email: '{{ muthukkumar@nichesoft.net }}', password: ' {{ "Nichesoftpin@07" }}', admin: true)
