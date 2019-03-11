@@ -111,49 +111,75 @@ run:
   #- exec: 
   #      cd: /var/www/discourse && rails r file.rb
   - exec: cd /var/www/discourse && sudo -u discourse bundle install --deployment --without test --without development
-  - exec: echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /user/.ssh/config
-  - file:
-      path: /user/.ssh/id_rsa
-      chmod: 600
+  - exec: mkdir /root/.ssh/
+    - exec: touch /root/.ssh/known_hosts
+    - exec: ssh-keyscan -t rsa azure.microsoft.com > /root/.ssh/known_hosts
+    - exec: echo "Host azure.microsoft.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
+    - exec: mkdir -p /root/.ssh
+    - file:
+       path: /root/.ssh/id_rsa
+       chmod: 600
       contents: |
         -----BEGIN RSA PRIVATE KEY-----
-        Proc-Type: 4,ENCRYPTED
-        DEK-Info: AES-128-CBC,19EA4589000FE19E7F44F2E86FDA3990   
-        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
+        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
         -----END RSA PRIVATE KEY-----
   - file:
-      path: /user/.ssh/id_rsa.pub
+      path: /root/.ssh/id_rsa.pub
       chmod: 600
-      contents: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKgU+rwoVvH9re6pPi2ECEdledqTS4qr4rFT+IbvNQkKGzXSz5HgKwQQsRe0rvjqVcVagIiwTv/Rre0Pz26UnFhkQdC87X22dI09RXMNmcTnmg9el57VYbrOBLxccHB04eBy/VYShRb9Q0FgNXfWFF0JncFPi9cJsKLI8HkZ9gkkESNZXDj5w7ZBf1oYOPuL6A1RyYrbujYGOXVydhtJ5j+XIFhEdjZYhBoeTrMIQ7J0Ralq5S9h46XZsKqVdlAM+ZEYcQm1cJKKbLljODKY21SWWy31dExYcriJKIfik966eVTKnYOeSgwTt+gzxk3TqJQRTZRwKw3oxU9V++SaF5 surendra@Nichesoft-31.local
+      contents: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDGHIVEHDshe/1cBQu59QTNxHzmFd8MeuwFn9kK1NsE14kW5f1MHwCObGnVor9723rtEgQTYYUbpZ1w48k4IuyyLA31OQUjXlGCkf+xVtK9YnFFn7UlhMwVabgsY3YglU5l+F9Y8DIBJrx5pCA5JlJuqZvKFCGyq/Mqrhw9FcEPBKKzJ6PtQZjQyKVhS1L2TuoPm4VB86T4uTUsAENjgeUA2iyRxzvOcceojYdIQYCBIE7SZpqarwGGfO55BwKQX+YgyAlvcuGyCHKJD/n3soSROoTxaIbf8OtM1WFnnZAMnhEoENGeagq3pGzdivhjLZlA+6ZVWinTVJ3ygmiFLQUy1qghnNn2XS5L89r1MuKe3TOdaf7GnyVodEm2j7bh+/Qp+cv5Hjl/qtdTvFdXnpl0BuR26NmhRlRvZ7jzIdDwndZFHfz4b7Ll2nXBkFGTYKDZamYBPgsnN+My6e/Ou8XFU8tiHRbU2etccYmPC082UR2h71T+ZxoWL4jvWDzfs2BlBflubUIH4whevh0cznRGGGcKj2UJvHrEv2g7PyEIls6UuXyYT7Ly5TVzCil9lm6RP8wCdvTwgG7HaWWDEDiIwu6MZbHBZVjgHxaHUH9Wu/TTuxNmKOcV5HbkuRW+GXHyEKpZ1rxhJIx+YDV0gRDvIPJPn2K/Jq5FTwZ2Gd3riQ== muthukkumar@nichesoft.net
   - exec: cd $home/plugins && git clone yec-addx@vs-ssh.visualstudio.com:v3/yec-addx/VAP%20Experience/Community%20Plugins
-  - exec: cd $home && sudo -E -u discourse bundle exec rake db:migrate
-  - exec: cd $home && rm -fr tmp/cache
-  - exec: cd $home &&  sudo -E -u discourse bundle exec rake assets:precompile
-  - exec: rm /user/.ssh/id_rsa
-  - exec: rm /user/.ssh/id_rsa.pub
+     - exec: cd $home && sudo -E -u discourse bundle exec rake db:migrate
+     - exec: cd $home && rm -fr tmp/cache
+     - exec: cd $home &&  sudo -E -u discourse bundle exec rake assets:precompile
+     - exec: rm /root/.ssh/id_rsa
+     - exec: rm /root/.ssh/id_rsa.pub
   - exec: echo "End of custom commands"
   
