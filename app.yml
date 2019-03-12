@@ -12,6 +12,7 @@ templates:
   - "templates/redis.template.yml"
   - "templates/web.template.yml"
   - "templates/web.ratelimited.template.yml"
+  - "templates/web.ssl.template.yml"
 ## Uncomment these two lines if you wish to add Lets Encrypt (https)
   #- "templates/web.ssl.template.yml"
   #- "templates/web.letsencrypt.ssl.template.yml"
@@ -71,6 +72,13 @@ env:
   DISCOURSE_SMTP_USER_NAME: muthukkumar@nichesoft.net
   DISCOURSE_SMTP_PASSWORD: "Divipin!5566"
   DISCOURSE_SMTP_ENABLE_START_TLS: true
+  
+  DISCOURSE_DB_USERNAME: amnimo_vap_admin@ykgw-vapcommunity-db
+  DISCOURSE_DB_PASSWORD: Yokogawa1
+  DISCOURSE_DB_HOST: ykgw-vapcommunity-db.postgres.database.azure.com
+  #  DISCOURSE_DB_NAME: communityportal
+  DISCOURSE_DB_NAME: communityportalnew_test
+  DISCOURSE_DB_PORT: 5432
 
   ## If you added the Lets Encrypt template, uncomment below to get a free SSL certificate
   #LETSENCRYPT_ACCOUNT_EMAIL: me@example.com
@@ -78,6 +86,9 @@ env:
   ## The CDN address for this Discourse instance (configured to pull)
   ## see https://meta.discourse.org/t/14857 for details
   #DISCOURSE_CDN_URL: //discourse-cdn.example.com
+  
+  DISCOURSE_AZURE_CLIENT_ID: e9ddcbde-b88f-4605-ad5a-07265e2265a3
+  DISCOURSE_AZURE_CLIENT_SECRET: $KJ3z}dR_WJlyuT6gwI=4L9z
 
 ## The Docker container is stateless; all data is stored in /shared
 volumes:
@@ -87,6 +98,9 @@ volumes:
   - volume:
       host: /var/discourse/shared/standalone/log/var-log
       guest: /var/log
+  - volume:
+      host: /root/.ssh
+      guest: /root/.ssh
 
 ## Plugins go here
 ## see https://meta.discourse.org/t/19157 for details
@@ -99,6 +113,7 @@ hooks:
           #- git clone https://github.com/MuthukkumarNicheSoft/CSS-plugin.git
           - git clone https://github.com/discourse/discourse-solved.git
           #- git clone https://github.com/gensub/discourse_email_attribute.git
+          - git clone yec-addx@vs-ssh.visualstudio.com:v3/yec-addx/VAP%20Experience/Community%20Plugins
           
 ## Any custom commands to run after building
 run:
@@ -110,76 +125,6 @@ run:
   #- exec: cp /shared/file.rb /var/www/discourse
   #- exec: 
   #      cd: /var/www/discourse && rails r file.rb
-  - exec: cd /var/www/discourse && sudo -u discourse bundle install --deployment --without test --without development
-  - exec: mkdir /root/.ssh/
-    - exec: touch /root/.ssh/known_hosts
-    - exec: ssh-keyscan -t rsa azure.microsoft.com > /root/.ssh/known_hosts
-    - exec: echo "Host azure.microsoft.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
-    - exec: mkdir -p /root/.ssh
-    - file:
-       path: /root/.ssh/id_rsa
-       chmod: 600
-      contents: |
-        -----BEGIN RSA PRIVATE KEY-----
-        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
-        -----END RSA PRIVATE KEY-----
-  - file:
-      path: /root/.ssh/id_rsa.pub
-      chmod: 600
-      contents: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDGHIVEHDshe/1cBQu59QTNxHzmFd8MeuwFn9kK1NsE14kW5f1MHwCObGnVor9723rtEgQTYYUbpZ1w48k4IuyyLA31OQUjXlGCkf+xVtK9YnFFn7UlhMwVabgsY3YglU5l+F9Y8DIBJrx5pCA5JlJuqZvKFCGyq/Mqrhw9FcEPBKKzJ6PtQZjQyKVhS1L2TuoPm4VB86T4uTUsAENjgeUA2iyRxzvOcceojYdIQYCBIE7SZpqarwGGfO55BwKQX+YgyAlvcuGyCHKJD/n3soSROoTxaIbf8OtM1WFnnZAMnhEoENGeagq3pGzdivhjLZlA+6ZVWinTVJ3ygmiFLQUy1qghnNn2XS5L89r1MuKe3TOdaf7GnyVodEm2j7bh+/Qp+cv5Hjl/qtdTvFdXnpl0BuR26NmhRlRvZ7jzIdDwndZFHfz4b7Ll2nXBkFGTYKDZamYBPgsnN+My6e/Ou8XFU8tiHRbU2etccYmPC082UR2h71T+ZxoWL4jvWDzfs2BlBflubUIH4whevh0cznRGGGcKj2UJvHrEv2g7PyEIls6UuXyYT7Ly5TVzCil9lm6RP8wCdvTwgG7HaWWDEDiIwu6MZbHBZVjgHxaHUH9Wu/TTuxNmKOcV5HbkuRW+GXHyEKpZ1rxhJIx+YDV0gRDvIPJPn2K/Jq5FTwZ2Gd3riQ== muthukkumar@nichesoft.net
-  - exec: cd $home/plugins && git clone yec-addx@vs-ssh.visualstudio.com:v3/yec-addx/VAP%20Experience/Community%20Plugins
-     - exec: cd $home && sudo -E -u discourse bundle exec rake db:migrate
-     - exec: cd $home && rm -fr tmp/cache
-     - exec: cd $home &&  sudo -E -u discourse bundle exec rake assets:precompile
-     - exec: rm /root/.ssh/id_rsa
-     - exec: rm /root/.ssh/id_rsa.pub
+  
   - exec: echo "End of custom commands"
   
