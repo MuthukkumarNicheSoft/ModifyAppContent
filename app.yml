@@ -8,7 +8,7 @@
 ## visit http://www.yamllint.com/ to validate this file as needed
 
 templates:
-  - "templates/postgres.template.yml"
+  #- "templates/postgres.template.yml"
   - "templates/redis.template.yml"
   - "templates/web.template.yml"
   - "templates/web.ratelimited.template.yml"
@@ -23,6 +23,7 @@ templates:
 expose:
   - "80:80"   # http
   - "443:443" # https
+  - "5432:5432" # postgres
 
 params:
   db_default_text_search_config: "pg_catalog.english"
