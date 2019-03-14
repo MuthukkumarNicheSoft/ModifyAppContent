@@ -12,7 +12,7 @@ templates:
   - "templates/redis.template.yml"
   - "templates/web.template.yml"
   - "templates/web.ratelimited.template.yml"
-  #- "templates/web.ssl.template.yml"
+  - "templates/web.ssl.template.yml"
 ## Uncomment these two lines if you wish to add Lets Encrypt (https)
   #- "templates/web.ssl.template.yml"
   #- "templates/web.letsencrypt.ssl.template.yml"
@@ -114,7 +114,7 @@ hooks:
           
 ## Any custom commands to run after building
 run:
-  - exec: echo "Beginning of custom commands"
+    - exec: echo "Beginning of custom commands"
   ## If you want to set the 'From' email address for your first registration, uncomment and change:
   ## After getting the first signup email, re-comment the line. It only needs to run once.
   #- exec: rails r "u = User.create!(username: '{{ subham }}', email: '{{ subham@nichesoft.net }}', password: ' {{ grttechgamer123 }}', admin: true)"
@@ -122,31 +122,31 @@ run:
   #- exec: cp /shared/file.rb /var/www/discourse
   #- exec: 
   #      cd: /var/www/discourse && rails r file.rb
-  - exec:
-       cd: $home
-      cmd:
-        - mkdir -p public/community
-        - cd public/community && ln -s ../uploads && ln -s ../backups
-  - replace:
-        global: true
-        filename: /etc/nginx/conf.d/discourse.conf
-        from: proxy_pass http://discourse;
-        to: |
-            rewrite ^/(.*)$ /community/$1 break;
-            proxy_pass http://discourse;
-  - replace:
-        filename: /etc/nginx/conf.d/discourse.conf
-        from: etag off;
-        to: |
-            etag off;
-            location /community {
-            rewrite ^/community?(.*)$ /$1;
-            }
-  - replace:
-        filename: /etc/nginx/conf.d/discourse.conf
-        from: $proxy_add_x_forwarded_for
-        to: $http_your_original_ip_header
-        global: true
+  #  - exec:
+  #        cd: $home
+  #       cmd:
+  #         - mkdir -p public/community
+  #         - cd public/community && ln -s ../uploads && ln -s ../backups
+  #  - replace:
+  #      global: true
+  #      filename: /etc/nginx/conf.d/discourse.conf
+  #      from: proxy_pass http://discourse;
+  #      to: |
+  #          rewrite ^/(.*)$ /community/$1 break;
+  #          proxy_pass http://discourse;
+  #  - replace:
+  #      filename: /etc/nginx/conf.d/discourse.conf
+  #      from: etag off;
+  #      to: |
+  #          etag off;
+  #          location /community {
+  #          rewrite ^/community?(.*)$ /$1;
+  #          }
+  #  - replace:
+  #      filename: /etc/nginx/conf.d/discourse.conf
+  #      from: $proxy_add_x_forwarded_for
+  #      to: $http_your_original_ip_header
+  #      global: true
   
-  - exec: echo "End of custom commands"
+    - exec: echo "End of custom commands"
   
