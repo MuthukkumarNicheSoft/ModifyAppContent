@@ -69,6 +69,7 @@ env:
   DISCOURSE_SMTP_PORT: 587
   DISCOURSE_SMTP_USER_NAME: muthukkumar@nichesoft.net
   DISCOURSE_SMTP_PASSWORD: "Divipin!5566"
+  DISCOURSE_RELATIVE_URL_ROOT: /community
   DISCOURSE_SMTP_ENABLE_START_TLS: true
   
   DISCOURSE_DB_USERNAME: amnimo_vap_admin@ykgw-vapcommunity-db
@@ -108,9 +109,7 @@ hooks:
         cd: $home/plugins
         cmd:
           - git clone https://github.com/discourse/docker_manager.git
-          #- git clone https://github.com/MuthukkumarNicheSoft/CSS-plugin.git
           - git clone https://github.com/discourse/discourse-solved.git
-          #- git clone https://github.com/gensub/discourse_email_attribute.git
           - git clone yec-addx@vs-ssh.visualstudio.com:v3/yec-addx/VAP%20Experience/Community%20Plugins
           
 ## Any custom commands to run after building
@@ -123,6 +122,31 @@ run:
   #- exec: cp /shared/file.rb /var/www/discourse
   #- exec: 
   #      cd: /var/www/discourse && rails r file.rb
+  - exec:
+       cd: $home
+      cmd:
+        - mkdir -p public/community
+        - cd public/community && ln -s ../uploads && ln -s ../backups
+  - replace:
+        global: true
+        filename: /etc/nginx/conf.d/discourse.conf
+        from: proxy_pass http://discourse;
+        to: |
+            rewrite ^/(.*)$ /community/$1 break;
+            proxy_pass http://discourse;
+  - replace:
+        filename: /etc/nginx/conf.d/discourse.conf
+        from: etag off;
+        to: |
+            etag off;
+            location /community {
+            rewrite ^/community?(.*)$ /$1;
+            }
+  - replace:
+        filename: /etc/nginx/conf.d/discourse.conf
+        from: $proxy_add_x_forwarded_for
+        to: $http_your_original_ip_header
+        global: true
   
   - exec: echo "End of custom commands"
   
