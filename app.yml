@@ -8,7 +8,7 @@
 ## visit http://www.yamllint.com/ to validate this file as needed
 
 templates:
-  #- "templates/postgres.template.yml"
+  - "templates/postgres.template.yml"
   - "templates/redis.template.yml"
   - "templates/web.template.yml"
   - "templates/web.ratelimited.template.yml"
@@ -23,7 +23,7 @@ templates:
 expose:
   - "80:80"   # http
   - "443:443" # https
-  - "5432:5432" # postgres
+  #- "5432:5432" # postgres
 
 params:
   db_default_text_search_config: "pg_catalog.english"
@@ -72,12 +72,12 @@ env:
   DISCOURSE_RELATIVE_URL_ROOT: /community
   DISCOURSE_SMTP_ENABLE_START_TLS: true
   
-  DISCOURSE_DB_USERNAME: amnimo_vap_admin@ykgw-vapcommunity-db
-  DISCOURSE_DB_PASSWORD: Yokogawa1
-  DISCOURSE_DB_HOST: ykgw-vapcommunity-db.postgres.database.azure.com
+  #DISCOURSE_DB_USERNAME: amnimo_vap_admin@ykgw-vapcommunity-db
+  #DISCOURSE_DB_PASSWORD: Yokogawa1
+  #DISCOURSE_DB_HOST: ykgw-vapcommunity-db.postgres.database.azure.com
   #  DISCOURSE_DB_NAME: communityportal
-  DISCOURSE_DB_NAME: communityportalnew_test
-  DISCOURSE_DB_PORT: 5432
+  #DISCOURSE_DB_NAME: communityportalnew_test
+  #DISCOURSE_DB_PORT: 5432
 
   ## If you added the Lets Encrypt template, uncomment below to get a free SSL certificate
   #LETSENCRYPT_ACCOUNT_EMAIL: me@example.com
@@ -85,9 +85,6 @@ env:
   ## The CDN address for this Discourse instance (configured to pull)
   ## see https://meta.discourse.org/t/14857 for details
   #DISCOURSE_CDN_URL: //discourse-cdn.example.com
-  
-  #DISCOURSE_AZURE_CLIENT_ID: e9ddcbde-b88f-4605-ad5a-07265e2265a3
-  #DISCOURSE_AZURE_CLIENT_SECRET: $KJ3z}dR_WJlyuT6gwI=4L9z
 
 ## The Docker container is stateless; all data is stored in /shared
 volumes:
@@ -114,7 +111,7 @@ hooks:
           
 ## Any custom commands to run after building
 run:
-    - exec: echo "Beginning of custom commands"
+        - exec: echo "Beginning of custom commands"
   ## If you want to set the 'From' email address for your first registration, uncomment and change:
   ## After getting the first signup email, re-comment the line. It only needs to run once.
   #- exec: rails r "u = User.create!(username: '{{ subham }}', email: '{{ subham@nichesoft.net }}', password: ' {{ grttechgamer123 }}', admin: true)"
@@ -122,31 +119,30 @@ run:
   #- exec: cp /shared/file.rb /var/www/discourse
   #- exec: 
   #      cd: /var/www/discourse && rails r file.rb
-  #  - exec:
-  #        cd: $home
-  #       cmd:
-  #         - mkdir -p public/community
-  #         - cd public/community && ln -s ../uploads && ln -s ../backups
-  #  - replace:
-  #      global: true
-  #      filename: /etc/nginx/conf.d/discourse.conf
-  #      from: proxy_pass http://discourse;
-  #      to: |
-  #          rewrite ^/(.*)$ /community/$1 break;
-  #          proxy_pass http://discourse;
-  #  - replace:
-  #      filename: /etc/nginx/conf.d/discourse.conf
-  #      from: etag off;
-  #      to: |
-  #          etag off;
-  #          location /community {
-  #          rewrite ^/community?(.*)$ /$1;
-  #          }
-  #  - replace:
-  #      filename: /etc/nginx/conf.d/discourse.conf
-  #      from: $proxy_add_x_forwarded_for
-  #      to: $http_your_original_ip_header
-  #      global: true
-  
-    - exec: echo "End of custom commands"
+        - exec:
+            cd: $home
+            cmd:
+                - mkdir -p public/community
+                - cd public/community && ln -s ../uploads && ln -s ../backups
+        - replace:
+            global: true
+            filename: /etc/nginx/conf.d/discourse.conf
+            from: proxy_pass http://discourse;
+            to: |
+                rewrite ^/(.*)$ /community/$1 break;
+                proxy_pass http://discourse;
+        - replace:
+            filename: /etc/nginx/conf.d/discourse.conf
+            from: etag off;
+            to: |
+                etag off;
+                location /community {
+                rewrite ^/community?(.*)$ /$1;
+                }
+        - replace:
+            filename: /etc/nginx/conf.d/discourse.conf
+            from: $proxy_add_x_forwarded_for
+            to: $http_your_original_ip_header
+            global: true
+        - exec: echo "End of custom commands"
   
