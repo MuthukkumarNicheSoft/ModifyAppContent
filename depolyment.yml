@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+        name: communityportal-deployment
+spec:
+	selector:
+	   matchLabels:
+		app: vapcommunityportal
+	replicas: 5
+	template:
+	   metadata:
+	     labels:
+		app: vapcommunityportal
+	   spec:
+		containers:
+			- name: vap-communityportal-container
+                  	image: vapcommunityportal.azurecr.io/communityportalimagenew:v1
+			ports:
+			-containerPort: 80
+kind: Service
+apiVersion: v1
+metadata:
+	name: communityportal-service
+spec:
+	selector:
+		app: vapcommunityportal
+	ports:
+		-protocol: TCP
+			port: 80
+			targetPort:80
+	type: LoadBalancer
