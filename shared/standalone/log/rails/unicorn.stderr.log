@@ -1,0 +1,5 @@
+I, [2019-04-02T07:47:49.081367 #69]  INFO -- : Refreshing Gem list
+I, [2019-04-02T07:47:56.870283 #69]  INFO -- : listening on addr=0.0.0.0:3000 fd=12
+I, [2019-04-02T07:48:42.942734 #69]  INFO -- : master process ready
+I, [2019-04-02T07:48:48.841217 #217]  INFO -- : worker=0 ready
+I, [2019-04-02T07:48:49.467169 #245]  INFO -- : worker=1 ready

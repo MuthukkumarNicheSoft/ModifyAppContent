@@ -1,0 +1,2 @@
+Apr  2 07:55:01 CommunityPortalCI-CD-app CRON[887]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  2 07:55:01 CommunityPortalCI-CD-app CRON[887]: pam_unix(cron:session): session closed for user root

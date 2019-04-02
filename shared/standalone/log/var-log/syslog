@@ -1,0 +1,12 @@
+Apr  2 07:47:48 CommunityPortalCI-CD-app rsyslogd: [origin software="rsyslogd" swVersion="8.16.0" x-pid="47" x-info="http://www.rsyslog.com"] start
+Apr  2 07:47:48 CommunityPortalCI-CD-app rsyslogd-2222: command 'KLogPermitNonKernelFacility' is currently not permitted - did you already set it via a RainerScript command (v6+ config)? [v8.16.0 try http://www.rsyslog.com/e/2222 ]
+Apr  2 07:47:48 CommunityPortalCI-CD-app rsyslogd-2307: warning: ~ action is deprecated, consider using the 'stop' statement instead [v8.16.0 try http://www.rsyslog.com/e/2307 ]
+Apr  2 07:47:48 CommunityPortalCI-CD-app rsyslogd: imklog: cannot open kernel log (/proc/kmsg): Operation not permitted.
+Apr  2 07:47:48 CommunityPortalCI-CD-app rsyslogd-2145: activation of module imklog failed [v8.16.0 try http://www.rsyslog.com/e/2145 ]
+Apr  2 07:47:48 CommunityPortalCI-CD-app rsyslogd: rsyslogd's groupid changed to 109
+Apr  2 07:47:48 CommunityPortalCI-CD-app rsyslogd: rsyslogd's userid changed to 106
+Apr  2 07:47:48 CommunityPortalCI-CD-app rsyslogd-2039: Could not open output pipe '/dev/xconsole':: No such file or directory [v8.16.0 try http://www.rsyslog.com/e/2039 ]
+Apr  2 07:47:48 CommunityPortalCI-CD-app rsyslogd-2007: action 'action 11' suspended, next retry is Tue Apr  2 07:48:18 2019 [v8.16.0 try http://www.rsyslog.com/e/2007 ]
+Apr  2 07:52:48 CommunityPortalCI-CD-app anacron[31]: Job `cron.daily' started
+Apr  2 07:52:48 CommunityPortalCI-CD-app anacron[744]: Updated timestamp for job `cron.daily' to 2019-04-02
+Apr  2 07:55:01 CommunityPortalCI-CD-app CRON[888]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)

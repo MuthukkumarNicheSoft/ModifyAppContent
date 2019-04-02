@@ -1,0 +1,1 @@
+Apr  2 07:47:48 CommunityPortalCI-CD-app rsyslogd: imklog: cannot open kernel log (/proc/kmsg): Operation not permitted.

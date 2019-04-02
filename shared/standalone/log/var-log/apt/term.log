@@ -1,0 +1,11 @@
+
+Log started: 2019-04-02  08:04:24
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 35351 files and directories currently installed.)
+Preparing to unpack .../libsystemd0_229-4ubuntu21.16_amd64.deb ...
+Unpacking libsystemd0:amd64 (229-4ubuntu21.16) over (229-4ubuntu21.15) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libsystemd0:amd64 (229-4ubuntu21.16) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 35351 files and directories currently installed.)
+Preparing to unpack .../systemd_229-4ubuntu21.16_amd64.deb ...
+Unpacking systemd (229-4ubuntu21.16) over (229-4ubuntu21.15) ...

@@ -1,0 +1,10 @@
+2019-04-02 08:03:44,201 INFO Initial blacklisted packages: 
+2019-04-02 08:03:44,202 INFO Initial whitelisted packages: 
+2019-04-02 08:03:44,202 INFO Starting unattended upgrades script
+2019-04-02 08:03:44,202 INFO Allowed origins are: ['o=Ubuntu,a=xenial', 'o=Ubuntu,a=xenial-security', 'o=UbuntuESM,a=xenial']
+2019-04-02 08:04:06,118 INFO Initial blacklisted packages: 
+2019-04-02 08:04:06,119 INFO Initial whitelisted packages: 
+2019-04-02 08:04:06,119 INFO Starting unattended upgrades script
+2019-04-02 08:04:06,119 INFO Allowed origins are: ['o=Ubuntu,a=xenial', 'o=Ubuntu,a=xenial-security', 'o=UbuntuESM,a=xenial']
+2019-04-02 08:04:23,162 INFO Packages that will be upgraded: binutils file ghostscript libdns-export162 libgd3 libgs9 libgs9-common libisc-export160 libmagic1 libsqlite3-0 libssl-dev libssl-doc libssl1.0.0 libsystemd0 libtiff5 libtiff5-dev libtiffxx5 libudev1 linux-libc-dev openssh-client openssh-server openssh-sftp-server openssl parallel systemd systemd-sysv
+2019-04-02 08:04:23,163 INFO Writing dpkg log to '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log'
