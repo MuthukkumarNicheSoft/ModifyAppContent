@@ -1,0 +1,215 @@
+Upgrading storage for solved
+Creating scope :open. Overwriting existing method Poll.open.
+Creating scope :open. Overwriting existing method Poll.open.
+Creating scope :open. Overwriting existing method Poll.open.
+Creating scope :open. Overwriting existing method Poll.open.
+Creating scope :open. Overwriting existing method Poll.open.
+Job exception: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+
+Job exception: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+
+Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED) subscribe failed, reconnecting in 1 second. Call stack ["/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:344:in `rescue in establish_connection'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:328:in `establish_connection'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:99:in `block in connect'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:291:in `with_reconnect'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:98:in `connect'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:363:in `ensure_connected'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:219:in `block in process'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:304:in `logging'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:218:in `process'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:132:in `block in call_loop'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:278:in `with_socket_timeout'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:131:in `call_loop'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/subscribe.rb:43:in `subscription'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/subscribe.rb:12:in `subscribe'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:2824:in `_subscription'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:2192:in `block in subscribe'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:45:in `block in synchronize'", "/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:45:in `synchronize'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:2191:in `subscribe'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/message_bus-2.2.0/lib/message_bus/backends/redis.rb:287:in `global_subscribe'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/message_bus-2.2.0/lib/message_bus.rb:721:in `global_subscribe_thread'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/message_bus-2.2.0/lib/message_bus.rb:669:in `block in new_subscriber_thread'"]
+Job exception: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+
+Job exception: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+
+Creating scope :open. Overwriting existing method Poll.open.
+Creating scope :open. Overwriting existing method Poll.open.
+Creating scope :open. Overwriting existing method Poll.open.
+Started GET "/" for 171.61.68.14 at 2019-04-01 18:04:00 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (111.5ms)
+  Rendered layouts/_head.html.erb (13.8ms)
+  Rendered common/_discourse_stylesheet.html.erb (50.7ms)
+  Rendered application/_header.html.erb (0.6ms)
+Completed 200 OK in 1265ms (Views: 206.9ms | ActiveRecord: 901.0ms)
+Started GET "/stylesheets/desktop_theme_2_ce9d7727d0e03c04676efa607013656dbe5df40e.css?__ws=amnimocicd.japaneast.cloudapp.azure.com" for 171.61.68.14 at 2019-04-01 18:04:02 +0000
+Processing by StylesheetsController#show as CSS
+Started GET "/stylesheets/desktop_faff805da0beb69e75a0de504446e8320b300877.css?__ws=amnimocicd.japaneast.cloudapp.azure.com" for 171.61.68.14 at 2019-04-01 18:04:02 +0000
+  Parameters: {"__ws"=>"amnimocicd.japaneast.cloudapp.azure.com", "name"=>"desktop_theme_2_ce9d7727d0e03c04676efa607013656dbe5df40e"}
+Processing by StylesheetsController#show as CSS
+  Parameters: {"__ws"=>"amnimocicd.japaneast.cloudapp.azure.com", "name"=>"desktop_faff805da0beb69e75a0de504446e8320b300877"}
+Sent file /var/www/discourse/tmp/stylesheet-cache/desktop_theme_2_ce9d7727d0e03c04676efa607013656dbe5df40e.css (0.2ms)
+Completed 200 OK in 53ms (ActiveRecord: 48.1ms)
+Sent file /var/www/discourse/tmp/stylesheet-cache/desktop_faff805da0beb69e75a0de504446e8320b300877.css (0.3ms)
+Completed 200 OK in 47ms (ActiveRecord: 39.2ms)
+Started GET "/svg-sprite/amnimocicd.japaneast.cloudapp.azure.com/svg-2-98685b88583c5498ef4557f22ae3d094175c0dc5.js" for 171.61.68.14 at 2019-04-01 18:04:03 +0000
+Processing by SvgSpriteController#show as */*
+  Parameters: {"hostname"=>"amnimocicd.japaneast.cloudapp.azure.com", "theme_ids"=>"2", "version"=>"98685b88583c5498ef4557f22ae3d094175c0dc5"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 189ms (Views: 1.2ms | ActiveRecord: 135.1ms)
+Sent file /var/www/discourse/public/images/avatar.png (0.1ms)
+Started GET "/session/csrf?_=1554141843991" for 171.61.68.14 at 2019-04-01 18:04:17 +0000
+Processing by SessionController#csrf as */*
+  Parameters: {"_"=>"1554141843991"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+Started POST "/session" for 171.61.68.14 at 2019-04-01 18:04:17 +0000
+Processing by SessionController#create as */*
+  Parameters: {"login"=>"Muthukkumar", "password"=>"[FILTERED]", "second_factor_method"=>"1"}
+Completed 200 OK in 1466ms (Views: 0.2ms | ActiveRecord: 925.0ms)
+Started POST "/login" for 171.61.68.14 at 2019-04-01 18:04:19 +0000
+Processing by StaticController#enter as HTML
+  Parameters: {"username"=>"Muthukkumar", "password"=>"[FILTERED]", "redirect"=>"http://amnimocicd.japaneast.cloudapp.azure.com/"}
+Redirected to http://amnimocicd.japaneast.cloudapp.azure.com/
+Completed 302 Found in 89ms (ActiveRecord: 79.1ms)
+Started GET "/" for 171.61.68.14 at 2019-04-01 18:04:19 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (8.6ms)
+  Rendered layouts/_head.html.erb (3.7ms)
+  Rendered common/_discourse_stylesheet.html.erb (6.7ms)
+  Rendered application/_header.html.erb (0.2ms)
+Completed 200 OK in 690ms (Views: 88.3ms | ActiveRecord: 380.3ms)
+Started GET "/stylesheets/admin_faff805da0beb69e75a0de504446e8320b300877.css?__ws=amnimocicd.japaneast.cloudapp.azure.com" for 171.61.68.14 at 2019-04-01 18:04:20 +0000
+Processing by StylesheetsController#show as CSS
+  Parameters: {"__ws"=>"amnimocicd.japaneast.cloudapp.azure.com", "name"=>"admin_faff805da0beb69e75a0de504446e8320b300877"}
+Started GET "/extra-locales/admin?v=2f67cd9204d0b9a8394906ca78abb810" for 171.61.68.14 at 2019-04-01 18:04:20 +0000
+Processing by ExtraLocalesController#show as */*
+  Parameters: {"v"=>"2f67cd9204d0b9a8394906ca78abb810", "bundle"=>"admin"}
+Sent file /var/www/discourse/tmp/stylesheet-cache/admin_faff805da0beb69e75a0de504446e8320b300877.css (0.1ms)
+Completed 200 OK in 23ms (ActiveRecord: 15.8ms)
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 171ms (Views: 0.6ms | ActiveRecord: 92.2ms)
+Sent file /var/www/discourse/tmp/avatar_proxy/1d985c59ab4ecffde517fe0b4788f419ba187a1f.png (0.1ms)
+Job exception: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+
+Job exception: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+
+Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED) subscribe failed, reconnecting in 1 second. Call stack ["/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:344:in `rescue in establish_connection'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:328:in `establish_connection'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:99:in `block in connect'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:291:in `with_reconnect'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:98:in `connect'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:363:in `ensure_connected'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:219:in `block in process'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:304:in `logging'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:218:in `process'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:132:in `block in call_loop'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:278:in `with_socket_timeout'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:131:in `call_loop'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/subscribe.rb:43:in `subscription'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/subscribe.rb:12:in `subscribe'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:2824:in `_subscription'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:2192:in `block in subscribe'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:45:in `block in synchronize'", "/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:45:in `synchronize'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:2191:in `subscribe'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/message_bus-2.2.0/lib/message_bus/backends/redis.rb:287:in `global_subscribe'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/message_bus-2.2.0/lib/message_bus.rb:721:in `global_subscribe_thread'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/message_bus-2.2.0/lib/message_bus.rb:669:in `block in new_subscriber_thread'"]
+Job exception: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+
+Job exception: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+
+Job exception: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+
+Job exception: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+
+Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED) subscribe failed, reconnecting in 1 second. Call stack ["/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:344:in `rescue in establish_connection'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:328:in `establish_connection'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:99:in `block in connect'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:291:in `with_reconnect'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:98:in `connect'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:363:in `ensure_connected'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:219:in `block in process'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:304:in `logging'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:218:in `process'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis/client.rb:118:in `call'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:889:in `block in get'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:45:in `block in synchronize'", "/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:45:in `synchronize'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/redis-4.0.1/lib/redis.rb:888:in `get'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/message_bus-2.2.0/lib/message_bus/backends/redis.rb:360:in `process_global_backlog'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/message_bus-2.2.0/lib/message_bus/backends/redis.rb:271:in `block in global_subscribe'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/message_bus-2.2.0/lib/message_bus/backends/redis.rb:284:in `global_subscribe'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/message_bus-2.2.0/lib/message_bus.rb:721:in `global_subscribe_thread'", "/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/message_bus-2.2.0/lib/message_bus.rb:669:in `block in new_subscriber_thread'"]
+Creating scope :open. Overwriting existing method Poll.open.
+Creating scope :open. Overwriting existing method Poll.open.
+Creating scope :open. Overwriting existing method Poll.open.
+Started OPTIONS "/" for 13.57.208.209 at 2019-04-01 19:09:33 +0000
+ActionController::RoutingError (No route matches [OPTIONS] "/")
+/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/actionpack-5.2.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+  Rendered exceptions/_not_found_topics.html.erb (120.9ms)
+  Rendering exceptions/not_found.html.erb within layouts/no_ember
+  Rendered exceptions/not_found.html.erb within layouts/no_ember (1.2ms)
+  Rendered layouts/_head.html.erb (119.7ms)
+  Rendered common/_discourse_stylesheet.html.erb (22.7ms)
+  Rendered application/_header.html.erb (3.2ms)
+  Rendering html template
+  Rendered html template (0.0ms)
+Started GET "/" for 185.44.229.241 at 2019-04-01 19:12:39 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (9.7ms)
+  Rendered layouts/_head.html.erb (3.7ms)
+  Rendered common/_discourse_stylesheet.html.erb (53.8ms)
+  Rendered application/_header.html.erb (0.5ms)
+Completed 200 OK in 1783ms (Views: 122.1ms | ActiveRecord: 1029.7ms)
+Started GET "/epgrec/do-record.sh" for 195.154.237.71 at 2019-04-01 19:47:36 +0000
+ActionController::RoutingError (No route matches [GET] "/epgrec/do-record.sh")
+/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/actionpack-5.2.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+  Rendered exceptions/_not_found_topics.html.erb (117.5ms)
+  Rendering exceptions/not_found.html.erb within layouts/no_ember
+  Rendered exceptions/not_found.html.erb within layouts/no_ember (1.0ms)
+  Rendered layouts/_head.html.erb (119.7ms)
+  Rendered common/_discourse_stylesheet.html.erb (145.7ms)
+  Rendered application/_header.html.erb (0.7ms)
+  Rendering html template
+  Rendered html template (0.1ms)
+Started GET "/" for 88.199.42.78 at 2019-04-01 20:54:42 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (9.1ms)
+  Rendered layouts/_head.html.erb (3.7ms)
+  Rendered common/_discourse_stylesheet.html.erb (0.5ms)
+  Rendered application/_header.html.erb (0.7ms)
+Completed 200 OK in 5802ms (Views: 49.9ms | ActiveRecord: 5203.5ms)
+Started GET "/" for 95.13.155.155 at 2019-04-01 22:55:14 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (1.9ms)
+  Rendered layouts/_head.html.erb (29.7ms)
+  Rendered common/_discourse_stylesheet.html.erb (0.1ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 1210ms (Views: 6.2ms | ActiveRecord: 700.1ms)
+Started GET "/" for 87.229.250.190 at 2019-04-01 23:32:49 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (1.8ms)
+  Rendered layouts/_head.html.erb (39.7ms)
+  Rendered common/_discourse_stylesheet.html.erb (0.1ms)
+  Rendered application/_header.html.erb (0.2ms)
+Completed 200 OK in 1833ms (Views: 6.0ms | ActiveRecord: 1100.2ms)
+Started GET "/" for 168.232.15.74 at 2019-04-02 00:07:11 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (1.8ms)
+  Rendered layouts/_head.html.erb (37.7ms)
+  Rendered common/_discourse_stylesheet.html.erb (0.2ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 1377ms (Views: 5.9ms | ActiveRecord: 796.2ms)
+Started GET "/" for 93.183.241.218 at 2019-04-02 00:07:28 +0000
+Started GET "/" for 79.73.153.88 at 2019-04-02 00:21:29 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (1.7ms)
+  Rendered layouts/_head.html.erb (28.2ms)
+  Rendered common/_discourse_stylesheet.html.erb (0.1ms)
+  Rendered application/_header.html.erb (0.2ms)
+Completed 200 OK in 1102ms (Views: 6.3ms | ActiveRecord: 640.5ms)
+Started GET "/" for 79.10.21.88 at 2019-04-02 00:40:52 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (1.9ms)
+  Rendered layouts/_head.html.erb (26.8ms)
+  Rendered common/_discourse_stylesheet.html.erb (0.1ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 1382ms (Views: 6.1ms | ActiveRecord: 696.9ms)
+  Rendering email/invite.html.erb
+  Rendered email/invite.html.erb (0.6ms)
+Sent mail to muthukkumar@nichesoft.net (3448.6ms)
+Started GET "/" for 45.71.109.19 at 2019-04-02 04:02:06 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (1.8ms)
+  Rendered layouts/_head.html.erb (33.3ms)
+  Rendered common/_discourse_stylesheet.html.erb (0.1ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 1462ms (Views: 12.8ms | ActiveRecord: 910.7ms)
+Started GET "/" for 94.102.49.193 at 2019-04-02 04:02:19 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (2.1ms)
+  Rendered layouts/_head.html.erb (29.8ms)
+  Rendered common/_discourse_stylesheet.html.erb (0.1ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 606ms (Views: 6.5ms | ActiveRecord: 583.8ms)
+Started GET "/robots.txt" for 94.102.49.193 at 2019-04-02 04:02:23 +0000
+Processing by RobotsTxtController#index as TEXT
+  Rendering robots_txt/index.erb
+  Rendered robots_txt/index.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started GET "/sitemap.xml" for 94.102.49.193 at 2019-04-02 04:02:28 +0000
+ActionController::RoutingError (No route matches [GET] "/sitemap.xml")
+/var/www/discourse/vendor/bundle/ruby/2.5.0/gems/actionpack-5.2.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+  Rendered exceptions/_not_found_topics.html.erb (28.9ms)
+  Rendering exceptions/not_found.html.erb within layouts/no_ember
+  Rendered exceptions/not_found.html.erb within layouts/no_ember (0.5ms)
+  Rendered layouts/_head.html.erb (3.2ms)
+  Rendered common/_discourse_stylesheet.html.erb (0.2ms)
+  Rendered application/_header.html.erb (0.2ms)
+  Rendering html template
+  Rendered html template (0.0ms)
+Started GET "/" for 187.11.47.12 at 2019-04-02 04:13:36 +0000
+Processing by ListController#latest as HTML
+  Rendering list/list.erb within layouts/application
+  Rendered list/list.erb within layouts/application (2.1ms)
+  Rendered layouts/_head.html.erb (27.4ms)
+  Rendered common/_discourse_stylesheet.html.erb (0.2ms)
+  Rendered application/_header.html.erb (0.1ms)
+Completed 200 OK in 1153ms (Views: 6.3ms | ActiveRecord: 523.0ms)

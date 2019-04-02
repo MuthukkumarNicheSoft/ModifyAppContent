@@ -1,0 +1,5 @@
+update-alternatives 2019-04-01 18:47:44: run with --quiet --remove rlogin /usr/bin/ssh
+update-alternatives 2019-04-01 18:47:44: auto-repair link group rlogin
+update-alternatives 2019-04-01 18:47:44: run with --quiet --remove rcp /usr/bin/ssh
+update-alternatives 2019-04-01 18:47:44: auto-repair link group rcp
+update-alternatives 2019-04-01 18:47:45: run with --install /usr/share/ghostscript/current ghostscript-current /usr/share/ghostscript/9.26 926
